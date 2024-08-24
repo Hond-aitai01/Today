@@ -1,0 +1,272 @@
+Introduction
+Git is a version control system that allows developers to keep track of changes made to their code over time. It allows multiple people to work on the same codebase simultaneously and makes it easy to revert to previous versions of the code if something goes wrong.
+
+GitHub is a website that provides hosting for Git repositories. It is a platform where developers can store their code, collaborate with others on open-source projects, and track issues and bugs. Developers can use GitHub to create their own repositories, or "repos," which are like folders for their code. They can also fork existing repos to make their own copies, and submit pull requests to propose changes to the original repo.
+
+Version
+To check the version of Git installed on your system, you can use the following command in your terminal or command prompt:
+
+
+Copy
+
+Copy
+git --version
+This will display the version number of Git currently installed on your system. For example, the output may look like this:
+
+
+Copy
+
+Copy
+git version 2.39.2
+This means that Git version 2.39.2 is currently installed on the system.
+
+Installation
+To install Git on your system, you can follow these steps:
+
+Windows
+
+Go to the Git website: git-scm.com/downloads
+
+Click the Windows link to download the installer.
+
+Once the installer is downloaded, double-click it to launch the installer.
+
+Follow the prompts in the installer to complete the installation process.
+
+After installation is complete, open a command prompt or Git Bash terminal and run git --version to verify that Git is installed.
+
+Mac OS
+
+Install Xcode Command Line Tools. Open the Terminal app and run the following command: xcode-select --install.
+
+Install Homebrew package manager by running this command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Use Homebrew to install Git: brew install git.
+
+After installation is complete, open a Terminal app and run git --version to verify that Git is installed.
+
+Linux
+
+Git is likely available in your distribution's default package repositories, so you can use your package manager to install it. For example, on Ubuntu or Debian-based systems, you can run the following command:
+
+
+Copy
+
+Copy
+sudo apt-get update
+sudo apt-get install git
+After installation is complete, run git --version to verify that Git is installed.
+
+Configuration
+To configure Git locally, you need to set up a few basic properties that identify you as the author of the changes you make in Git. Here are the steps to configure Git locally:
+
+Set your username: Use the following command to set your Git username:
+
+
+Copy
+
+Copy
+ git config --global user.name "Your Name"
+Set your email address: Use the following command to set your email address:
+
+
+Copy
+
+Copy
+ git config --global user.email "your-email@example.com"
+Set your preferred text editor: You can set your preferred text editor for Git with the following command:
+
+
+Copy
+
+Copy
+ git config --global core.editor "editor-of-your-choice"
+For example, to set your preferred text editor to Nano, use the following command:
+
+
+Copy
+
+Copy
+ git config --global core.editor nano
+Check your configuration: You can check your Git configuration at any time by using the following command:
+
+
+Copy
+
+Copy
+ git config --list
+This will display your Git configuration properties and their values. You can change your Git configuration properties at any time by running the above commands with different values.
+
+How To Start Git Repository
+
+
+Starting a Git repository and committing changes involves the following steps:
+
+Initialize a Git repository in an existing directory:
+
+
+Copy
+
+Copy
+ cd <directory>
+ git init
+Replace <directory> with the name of the directory that you want to turn into a Git repository.
+
+Stage and commit your changes:
+
+
+Copy
+
+Copy
+ git add <file>
+ git commit -m "Your commit message"
+Replace <file> with the name of the file you want to stage and replace "Your commit message" with a meaningful message describing your changes.
+
+Push the changes to the remote repository using the git push command:
+
+
+Copy
+
+Copy
+ git push origin <branch>
+Replace <branch> with the name of the branch you want to push the changes to. If you're pushing to the main branch, you can use main instead of <branch>.
+
+Here's a more detailed explanation:
+
+Initializing a Git repository: Use the git init command in the terminal (or Git Bash on Windows) to turn an existing directory into a Git repository. This will create a new .git subdirectory in the directory, which will store all the information about the repository, such as its commit history and configuration.
+
+Adding and committing changes: Use the git add command to stage changes in your files, and the git commit command to commit the changes to the repository's history. The -m option allows you to specify a commit message that describes the changes.
+
+This will upload your changes to the remote repository, making them available for others to access. Note that you may need to enter your username and password for the hosting service if you're pushing changes to a repository that you don't own.
+
+Note that once you've committed changes to a Git repository, they are stored in the repository's history and can be retrieved at any time using the git log command. This makes it easy to revert to previous versions of the code if necessary.
+
+Common Git Commands
+git init: This command is used to initialize a new Git repository. It creates a new directory called .git, which contains all the necessary files for keeping track of the codebase. This command is typically used when you are starting a new project and want to use Git to track the changes.
+
+git clone: This command is used to create a copy of a remote repository on your local machine. It allows you to download a copy of a repository from a remote location and create a local copy of it. You can then make changes to the local copy and push them back to the remote repository.
+
+git add: This command is used to stage changes for commit. It tells Git that you want to include certain files in the next commit. You can use this command to add individual files or a group of files.
+
+git commit: This command is used to save changes to the repository. It creates a new "commit" that includes all the changes that have been staged with the git add command. Each commit includes a message that describes the changes that were made.
+
+git status: This command is used to check the current status of the repository. It shows which files have been modified, which files have been staged for commit, and which branch you are currently on. This command is useful for getting a quick overview of the changes that have been made to the codebase.
+
+git diff: This command is used to show the difference between the current version of a file and the last committed version. It shows the lines that have been added or removed. This command is useful for reviewing changes before committing them.
+
+git log: This command is used to display the commit history of a repository. It shows a list of all the commits that have been made, along with the author, date, and commit message. This command is useful for reviewing the history of a repository and understanding how it has evolved over time.
+
+git branch: This command is used to create, list, or delete branches in a repository. Branches allow multiple developers to work on the same repository simultaneously without interfering with each other. (The git branch -M main command renames the current branch to "main". The -M option stands for "move/rename" and is used to move or rename a branch in Git.)
+
+git merge: This command is used to merge changes from one branch to another. It allows developers to combine the changes made in different branches and integrate them into the main branch.
+
+git pull: This command is used to retrieve changes from a remote repository and merge them with the local copy. It fetches changes from the remote repository and then automatically merges them with the current branch.
+
+git push: This command is used to upload changes to a remote repository. It sends changes made in the local repository to the remote repository, updating it with the new commits. (The git push -u origin main command pushes the "main" branch to the remote repository named "origin". The -u option sets the upstream branch for the current branch.)
+
+
+
+These are some of the most commonly used Git commands, but there are many other useful commands that you can use to manage your codebase and collaborate with others.
+
+Git Lifecycle
+The Git file lifecycle refers to the series of stages that a file in a Git repository goes through as you make changes and commit them.
+
+
+
+Here's a simple explanation of the Git file lifecycle:
+
+Untracked: When you first create a file in your Git repository, it is considered untracked. This means that Git does not yet know about the file, and it will not be included in any commits until you add it to the repository.
+
+Staged: To include a file in a Git commit, you need to stage it. Staging a file adds it to the list of files that will be included in the next commit. You can stage a file using the git add command.
+
+Committed: Once you've staged a file, you can commit it to the repository. A commit is a snapshot of your codebase, including all the changes you've made in the staged files. You can make a commit using the git commit command.
+
+Modified: After a file has been committed, you can continue to make changes to it. When you make changes to a file, it is considered modified.
+
+Staged (again): To include the new changes in your next commit, you'll need to stage the modified file again. This is because Git only tracks changes that have been staged, not changes made directly to the file.
+
+Committed (again): Once you've staged the modified file, you can make a new commit to save the changes to the repository.
+
+Tracked: When a file has been committed to the repository, it is considered tracked. Tracked files are part of your codebase's history, and changes to them will be recorded in future commits.
+
+The Git file lifecycle is a key part of the Git version control process. By tracking the changes you make to your code and preserving them in commits, Git provides a complete history of your codebase, making it easy to revert changes or compare different versions of your code.
+
+Other Important Commands
+Git Diff
+The git diff command is used to show the differences between two commits, or between the working directory and the most recent commit. Here are some examples of how you might use git diff:
+
+Compare working directory and the most recent commit: To see the differences between the files in the working directory and the most recent commit, you can use the command git diff. This will show the changes that you have made but haven't committed yet.
+
+Compare two commits: To see the differences between two commits, you can use the command git diff <commit1> <commit2>. For example, git diff HEAD~2 HEAD~1 will show the differences between the 2nd and 1st last commits.
+
+Compare branch and another branch: To see the differences between two branches, you can use the command git diff <branch1> <branch2>. For example, git diff main feature-x will show the differences between the main branch and feature-x branch.
+
+Compare with a tag: To see the differences between a commit and a tag, you can use the command git diff <tag> <commit>. For example, git diff v1.0 main will show the differences between the tag "v1.0" and the main branch.
+
+Viewing specific file: You can use git diff <file> to show the differences between a specific file in the working directory and the most recent commit. For example git diff index.html will show the differences between the index.html file in the working directory and the most recent commit.
+
+Color output: you can add the --color-words option to see the specific changes in the words instead of lines, for example git diff --color-words
+
+It's important to note that git diff command shows the differences between the files, not the entire files. It can be a powerful tool for identifying and resolving conflicts, and for reviewing changes before committing them.
+
+Git Stash
+Git stash is a feature in Git that allows you to temporarily save changes you have made in your current branch but are not ready to commit. This is useful when you need to switch to another branch to work on a different task, but don't want to commit the changes you have made in your current branch. Stashing your changes allows you to switch branches and work on the new task without losing the changes you made in your current branch. Later, you can apply the stashed changes back to your current branch or to a different branch.
+
+Here is the basic command to use Git stash:
+
+To stash changes in your current branch, run the following command in your terminal or command line:
+
+
+Copy
+
+Copy
+ git stash
+To apply the latest stash, run the following command:
+
+
+Copy
+
+Copy
+ git stash apply
+To list all stashes, use the following command:
+
+
+Copy
+
+Copy
+ git stash list
+To apply a specific stash, use the stash@{index} syntax, where index is the stash number from the list. For example:
+
+
+Copy
+
+Copy
+ git stash apply stash@{2}
+To drop a stash, use the following command:
+
+
+Copy
+
+Copy
+ git stash drop stash@{index}
+Note that stash@{0} is the latest stash, stash@{1} is the one before it, and so on. The stash commands are very flexible, and there are many options and variations available. Consult the Git documentation for more information on using Git stash.
+
+Here are some additional Git stash commands:
+
+git stash show: Display the changes in a stash.
+
+git stash pop: Apply a stash and remove it from the stash list.
+
+git stash branch <branch-name>: Create a new branch from the latest stash and apply the stash changes to the new branch.
+
+git stash clear: Remove all stashes.
+
+git stash drop <stash-name>: Remove a specific stash from the stash list.
+
+git stash apply --index: Apply the stash and try to reapply the index changes as well.
+
+git stash create: Create a stash with a descriptive message.
+
+These commands provide additional options and ways to interact with Git stash, so you can choose the one that fits your needs best. As always, refer to the Git documentation for more information and details on using Git stash.
+
+Git Restore
